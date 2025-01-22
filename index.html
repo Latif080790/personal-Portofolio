@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TERASID's personal portfolio website showcasing web development and design work">
+    <meta name="theme-color" content="#35424a">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    
+    <title>Personal Website - TERASID</title>
+    
+    <!-- PWA support -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Dark Mode</em>
+    </div>
+
+    <header>
+        <h1>Welcome to TERASID's Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>I am a passionate individual with a love for technology and design.</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skill-bars">
+            <div class="skill">
+                <span class="skill-name">HTML/CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;" data-value="90"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;" data-value="85"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Python</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;" data-value="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="fade-in">
+        <h2>My Work</h2>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="web">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <div class="portfolio-info">
+                    <h3>Project 1</h3>
+                    <p>Web Development</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="app">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <div class="portfolio-info">
+                    <h3>Project 2</h3>
+                    <p>Mobile App</p>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="design">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <div class="portfolio-info">
+                    <h3>Project 3</h3>
+                    <p>UI Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TERASID. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
